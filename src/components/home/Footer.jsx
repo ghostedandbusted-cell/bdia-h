@@ -66,6 +66,19 @@ const Footer = () => {
             </h3>
             <ul className='space-y-3'>
               <li>
+                <button 
+                  onClick={() => {
+                    const element = document.getElementById('portfolio')
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    }
+                  }}
+                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline text-left'
+                >
+                  Portfolio
+                </button>
+              </li>
+              <li>
                 <Link 
                   to="/contact"
                   className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'

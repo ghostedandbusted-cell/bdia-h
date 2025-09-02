@@ -44,13 +44,13 @@ const Home = () => {
       <div className='h-screen w-screen fixed top-0 left-0 z-0'>
         <Video />
         {/* Dark overlay for better text readability */}
-        <div className='absolute inset-0 bg-black/20 z-10'></div>
+        <div className='absolute inset-0 bg-black/30 z-10'></div>
       </div>
       
       {/* Scrollable content */}
-      <div className='relative z-20'>
+      <div className='relative z-20 pt-16 lg:pt-20'>
         {/* Hero Section */}
-        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content'>
+        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content -mt-16 lg:-mt-20'>
           <HomeHeroText />
           <HomeBottomText />
         </div>

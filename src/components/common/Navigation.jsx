@@ -24,28 +24,63 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className='fixed top-8 left-1/2 transform -translate-x-1/2 z-50 bg-black/80 backdrop-blur-md rounded-full px-8 py-4'>
-      <ul className='flex items-center space-x-6'>
-        {navItems.map((item, index) => (
-          <li key={index}>
-            {item.link ? (
-              <Link 
-                to={item.link}
-                className='font-[font1] text-sm lg:text-base text-white hover:text-[#D3FD50] transition-colors duration-300 uppercase tracking-wide'
-              >
-                {item.name}
-              </Link>
-            ) : (
-              <button 
-                onClick={item.action}
-                className='font-[font1] text-sm lg:text-base text-white hover:text-[#D3FD50] transition-colors duration-300 uppercase tracking-wide'
-              >
-                {item.name}
-              </button>
-            )}
-          </li>
-        ))}
-      </ul>
+    <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200'>
+      <div className='container mx-auto lg:px-12 px-6'>
+        <div className='flex items-center justify-between h-16 lg:h-20'>
+          {/* Logo/Brand */}
+          <Link to='/' className='font-[font2] text-2xl lg:text-3xl uppercase text-black hover:text-[#D3FD50] transition-colors duration-300'>
+            K72
+          </Link>
+
+          {/* Navigation Items */}
+          <ul className='hidden lg:flex items-center space-x-8'>
+            {navItems.map((item, index) => (
+              <li key={index}>
+                {item.link ? (
+                  <Link 
+                    to={item.link}
+                    className='font-[font1] text-sm text-black hover:text-[#D3FD50] transition-colors duration-300 uppercase tracking-wide'
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button 
+                    onClick={item.action}
+                    className='font-[font1] text-sm text-black hover:text-[#D3FD50] transition-colors duration-300 uppercase tracking-wide'
+                  >
+                    {item.name}
+                  </button>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile Navigation - Simplified horizontal scroll */}
+          <div className='lg:hidden flex-1 ml-8'>
+            <div className='flex items-center space-x-6 overflow-x-auto scrollbar-hide'>
+              {navItems.map((item, index) => (
+                <div key={index} className='flex-shrink-0'>
+                  {item.link ? (
+                    <Link 
+                      to={item.link}
+                      className='font-[font1] text-xs text-black hover:text-[#D3FD50] transition-colors duration-300 uppercase tracking-wide whitespace-nowrap'
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <button 
+                      onClick={item.action}
+                      className='font-[font1] text-xs text-black hover:text-[#D3FD50] transition-colors duration-300 uppercase tracking-wide whitespace-nowrap'
+                    >
+                      {item.name}
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   )
 }

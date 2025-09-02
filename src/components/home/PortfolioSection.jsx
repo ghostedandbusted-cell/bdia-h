@@ -64,10 +64,10 @@ const PortfolioSection = () => {
       <div className='container mx-auto lg:px-12 px-6 lg:py-24 py-16'>
         <div className='text-center mb-16'>
           <h2 className='portfolio-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight'>
-            Portfolio
+            Our Portfolio
           </h2>
           <p className='font-[font1] lg:text-xl text-lg lg:max-w-3xl max-w-xl mx-auto leading-relaxed text-gray-700'>
-            Découvrez nos créations les plus récentes et laissez-vous inspirer par notre approche unique de la vidéographie de mariage.
+            Discover our most recent creations and let yourself be inspired by our unique approach to wedding videography.
           </p>
         </div>
 
