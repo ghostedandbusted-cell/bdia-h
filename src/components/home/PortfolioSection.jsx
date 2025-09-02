@@ -87,14 +87,6 @@ const PortfolioSection = () => {
             </div>
           ))}
         </div>
-
-        <div className='text-center'>
-          <Link to='/projects' className='lg:border-3 border-2 hover:border-[#D3FD50] hover:text-[#D3FD50] hover:bg-[#D3FD50] hover:text-black lg:h-16 h-12 flex items-center px-8 lg:px-12 border-black rounded-full uppercase transition-all duration-300 cursor-pointer group inline-flex'>
-            <span className='font-[font2] text-lg lg:text-xl group-hover:scale-105 transition-transform duration-300'>
-              View Full Portfolio
-            </span>
-          </Link>
-        </div>
       </div>
     </section>
   )
