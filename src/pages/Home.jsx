@@ -18,7 +18,6 @@ import gsap from 'gsap'
 const Home = () => {
   const heroSectionRef = useRef(null)
 
-
   useGSAP(() => {
     // Smooth fade-in animation for hero content
     gsap.fromTo('.hero-content', 
@@ -35,6 +34,7 @@ const Home = () => {
       }
     )
   })
+
   return (
     <div className='text-white relative'>
       {/* Navigation */}
@@ -48,9 +48,9 @@ const Home = () => {
       </div>
       
       {/* Scrollable content */}
-      <div className='relative z-20 pt-16 lg:pt-20'>
+      <div className='relative z-20 pt-20'>
         {/* Hero Section */}
-        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content -mt-16 lg:-mt-18'>
+        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content -mt-20'>
           <HomeHeroText />
           <HomeBottomText />
         </div>
