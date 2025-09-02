@@ -63,7 +63,6 @@ html {
 nav {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Hide scrollbar for mobile navigation */
